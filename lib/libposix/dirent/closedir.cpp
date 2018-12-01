@@ -19,6 +19,7 @@
 #include "fcntl.h"
 #include "unistd.h"
 
+#include "../dirent.h"
 int closedir(DIR *dirp)
 {
     /* Close file handle. */

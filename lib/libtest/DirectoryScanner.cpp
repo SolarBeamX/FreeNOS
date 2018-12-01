@@ -25,6 +25,12 @@
 #include "TestSuite.h"
 #include "DirectoryScanner.h"
 
+#include "../libposix/dirent.h"
+#include "../libstd/String.h"
+
+extern C struct dirent * readdir(DIR *dirp);
+extern C int closedir(DIR *dirp);
+
 DirectoryScanner::DirectoryScanner(int argc, char **argv)
 {
     m_argc = argc;
